@@ -2,6 +2,23 @@
 
 > 左侧栏的两件事，一个插件管完：**图标折叠** + **固定选择记住**。
 
+<p align="center">
+  <img src="docs/images/sidebar.png" alt="侧栏顶部：可折叠的「全局面板」标题行，下面是图标与「更多」菜单" width="286">
+</p>
+
+<p align="center">
+  <sub>侧栏顶部多了一行「全局面板 ▾」——点整行就收起 / 展开其余图标。<br>
+  图里「更多」菜单中的「进攻基金 / 上下文洞察 / 技能中心 / 免费搜索」就是被取消固定的面板。</sub>
+</p>
+
+<p align="center">
+  <img src="docs/images/settings.png" alt="设置 → 左侧栏：折叠开关与已被取消固定的面板清单" width="480">
+</p>
+
+<p align="center">
+  <sub>设置 → 左侧栏：折叠开关、当前状态、以及记住的面板清单（含「已接管」实时状态）。</sub>
+</p>
+
 这是 `dsh-sidebar-fold`（侧栏整理）和 `dsh-pin-persist`（侧栏固定）的合并版。
 两者都在改左侧栏的同一块地方，分成两个插件维护既啰嗦、又要小心它们互相踩。
 合并之后：一个包、一个设置页、一份状态。
@@ -52,6 +69,14 @@ function createPanelPins() {
 
 侧栏重建（插件重载）时会在 `slots/changed` 上重新借用，不会记着一个已经没人用的旧 store。
 
+## 装
+
+```sh
+dsh plugin --profile desktop add "github:XiaoSHang05/dsh-sidebar-kit"
+```
+
+装完**重启 DSH**，然后刷新页面。浏览器侧的代码在进程重启时才会重新读取。
+
 ## 从旧插件迁移
 
 如果你之前装过 `dsh-sidebar-fold` 或 `dsh-pin-persist`，本插件**首次运行会自动继承**
@@ -66,7 +91,7 @@ function createPanelPins() {
 
 ## 设置
 
-**设置 → 左侧栏**：
+**设置 → 左侧栏**（见上面第二张图）：
 
 - 折叠的开合开关与当前状态；
 - 当前记着哪些面板被取消固定（含「已接管 / 未接管」的实时状态）；
