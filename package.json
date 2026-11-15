@@ -1,0 +1,58 @@
+{
+  "name": "dsh-sidebar-kit",
+  "version": "1.0.0",
+  "description": "Everything for the DSH left sidebar in one plugin: fold the global panel icons into one collapsible header row, and make the panel pins survive a refresh or a restart (the stock sidebar keeps them in memory only).",
+  "type": "module",
+  "license": "MIT",
+  "author": "XiaoSHang05",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "sidebar",
+    "ui",
+    "pin",
+    "persistence",
+    "tidy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XiaoSHang05/dsh-sidebar-kit.git"
+  },
+  "homepage": "https://github.com/XiaoSHang05/dsh-sidebar-kit#readme",
+  "bugs": {
+    "url": "https://github.com/XiaoSHang05/dsh-sidebar-kit/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-0"
+  }
+}

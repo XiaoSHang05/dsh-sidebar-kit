@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Left sidebar",
+    "description": "Sidebar kit: folds the global panel icons into one collapsible header row, and remembers the panel pins (the stock sidebar keeps them in memory only)."
+  }
+}

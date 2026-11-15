@@ -1,0 +1,12 @@
+# dsh-sidebar-kit bundle patch.
+#
+# Inserts one plugin row. The host half (exports ".") does nothing; the whole
+# plugin lives in the browser half (exports "./client").
+#
+# It patches nothing: it registers one row of its own in the sidebar's global
+# panel list, and borrows the sidebar entry's injected pin face through the
+# public `ctx.slots.entriesOfSlot()` API. Uninstalling this bundle restores the
+# stock sidebar exactly.
+- insert:
+    - id: sidebar-kit
+      name: dsh-sidebar-kit
